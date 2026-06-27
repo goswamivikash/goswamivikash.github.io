@@ -1,74 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vikash Goswami - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vikash Goswami - Portfolio</title>
+
+<style>
+/* =========================
+   BASIC RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background: #f4f6f9;
+  color: #222;
+  transition: 0.4s;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: linear-gradient(135deg, #1f3c88, #2f80ed);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeDown 1s ease;
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* =========================
+   CONTACT BUTTONS
+========================= */
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons a, .buttons button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.buttons a {
+  background: white;
+  color: #1f3c88;
+}
+
+.buttons a:hover {
+  transform: scale(1.05);
+}
+
+.buttons button {
+  background: black;
+  color: white;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 30px;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  animation: fadeUp 1s ease;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.main-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 20px;
+  background: #1f3c88;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .buttons a, .buttons button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Vikash Goswami</h1>
-    <p>Customer Experience · Logistics Tech · Fintech · Fleet Operations</p>
+<header>
+  <h1>Vikash Goswami</h1>
+  <p>Customer Experience · Logistics Tech · Fintech · Fleet Operations</p>
 
-    <div class="contact">
-      <p>📞 +91 6263184285</p>
-      <p>📍 Bengaluru, India</p>
-      <p>✉️ swamiv768@gmail.com</p>
-      <p>🔗 LinkedIn: linkedin.com/in/vikash-goswami-14b501180</p>
-    </div>
-  </header>
+  <div class="buttons">
+    <a href="mailto:swamiv768@gmail.com">📧 Email</a>
 
-  <section>
-    <h2>Summary</h2>
-    <p>
-      Customer Onboarding, Customer Support & Account Management professional with 5+ years at BlackBuck.
-      Expertise in FASTag, GPS, Fuel Cards, Loans, and fleet operations with strong performance in retention,
-      acquisition, and cross-selling.
-    </p>
-  </section>
+    <a href="https://www.linkedin.com/in/vikash-goswami-14b501180" target="_blank">💼 LinkedIn</a>
 
-  <section>
-    <h2>Experience</h2>
+    <a href="https://wa.me/916263184285" target="_blank">💬 WhatsApp</a>
 
-    <div class="card">
-      <h3>Senior Associate – Customer Experience</h3>
-      <p>BlackBuck Limited | May 2021 – Present</p>
-      <ul>
-        <li>Managed 500+ fleet owner accounts with 92%+ renewal rate</li>
-        <li>Handled 80+ daily support tickets (FASTag, GPS, Loans)</li>
-        <li>Onboarded 7,200+ FASTag accounts</li>
-        <li>Generated ₹5,00,000 revenue from fuel sensor deal</li>
-      </ul>
-    </div>
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+  </div>
+</header>
 
-    <div class="card">
-      <h3>Senior Marketing Executive</h3>
-      <p>Neoteric Properties | 2020 – 2021</p>
-      <ul>
-        <li>Handled premium property marketing campaigns</li>
-        <li>Managed legal documentation with 100% accuracy</li>
-      </ul>
-    </div>
+<section class="card">
+  <h2>Summary</h2>
+  <p>
+    5+ years experience in Customer Experience, FASTag, GPS, Fuel Cards, Loans, and Fleet Operations
+    at BlackBuck. Strong in customer retention, onboarding, and fintech sales.
+  </p>
+</section>
 
-  </section>
+<section class="card">
+  <h2>Experience</h2>
 
-  <section>
-    <h2>Education</h2>
-    <p>PGDCA – Makhanlal University (2021–22)</p>
-    <p>B.Com – Jiwaji University (2017–20)</p>
-  </section>
+  <h3>Senior Associate – BlackBuck</h3>
+  <ul>
+    <li>Managed 500+ fleet accounts with 92%+ renewal rate</li>
+    <li>Handled 80+ support tickets daily</li>
+    <li>Onboarded 7,200+ FASTag accounts</li>
+    <li>Generated ₹5,00,000 revenue from fuel sensor deal</li>
+  </ul>
 
-  <section>
-    <h2>Skills</h2>
-    <p>
-      Sales · Customer Success · FASTag · GPS · CRM (Salesforce, Zendesk, Dynamics) · MIS Reporting · SQL · APIs
-    </p>
-  </section>
+  <br>
 
-  <button onclick="showMessage()">Click for Motivation 🚀</button>
+  <h3>Marketing Executive – Neoteric Properties</h3>
+  <ul>
+    <li>Handled premium property marketing campaigns</li>
+    <li>Managed legal documentation with 100% accuracy</li>
+  </ul>
+</section>
 
-  <script src="script.js"></script>
+<section class="card">
+  <h2>Skills</h2>
+  <p>Sales · Customer Success · FASTag · GPS · CRM · MIS · SQL · APIs · Fleet Operations</p>
+</section>
+
+<section class="card">
+  <h2>Education</h2>
+  <p>PGDCA – Makhanlal University</p>
+  <p>B.Com – Jiwaji University</p>
+</section>
+
+<button class="main-btn" onclick="motivation()">
+  Click for Motivation 🚀
+</button>
+
+<script>
+/* =========================
+   DARK MODE
+========================= */
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+/* =========================
+   MOTIVATION ALERT
+========================= */
+function motivation() {
+  alert("Keep going 🚀 You already have strong real-world experience!");
+}
+</script>
+
 </body>
 </html>
