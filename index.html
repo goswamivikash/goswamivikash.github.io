@@ -1,99 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vikash Goswami | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vikash Goswami | Portfolio</title>
 
-  <!-- CSS FILES -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/projects.css">
-  <link rel="stylesheet" href="css/skills.css">
-  <link rel="stylesheet" href="css/timeline.css">
-  <link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR (GLASS)
+========================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 999;
+}
+
+nav h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #60a5fa;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg,#60a5fa,#a78bfa,#34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeUp 1s ease;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.btns {
+  margin-top: 25px;
+}
+
+.btns a {
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transition: 0.3s;
+}
+
+.btns a:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =========================
+   CARDS (GLASS)
+========================= */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #60a5fa;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+  border-left: 2px solid #60a5fa;
+  padding-left: 20px;
+}
+
+.timeline div {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SKILLS GRID
+========================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  font-size: 13px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* =========================
+   SCROLL EFFECT
+========================= */
+section {
+  animation: fadeUp 1s ease;
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">VG</div>
-
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-  </ul>
-
-  <button onclick="toggleTheme()" class="theme-btn">🌙</button>
+<!-- NAV -->
+<nav>
+  <h2>VG</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#exp">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero" class="hero">
-  <h1 class="fade-in">Vikash Goswami</h1>
-  <p class="fade-in">Customer Experience · Logistics Tech · Fintech · Fleet Operations</p>
+<div class="hero">
+  <h1>Vikash Goswami</h1>
+  <p>Customer Experience • Logistics Tech • Fintech • Fleet Operations</p>
 
-  <div class="hero-buttons">
+  <div class="btns">
     <a href="mailto:swamiv768@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/vikash-goswami-14b501180" target="_blank">LinkedIn</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     <a href="https://wa.me/916263184285" target="_blank">WhatsApp</a>
-    <button onclick="downloadResume()">Resume</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    5+ years experience in Customer Experience, FASTag onboarding, GPS tracking,
+    fleet operations and fintech sales at BlackBuck.
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    5+ years experience in Customer Experience, FASTag onboarding, GPS tracking,
-    fleet operations, and fintech sales at BlackBuck.
-  </p>
-</section>
-
-<!-- EXPERIENCE TIMELINE -->
-<section id="experience" class="section">
+<!-- EXPERIENCE -->
+<section id="exp">
   <h2>Experience</h2>
 
   <div class="timeline">
-    <div class="item">
+
+    <div class="card">
       <h3>BlackBuck - Senior Associate</h3>
-      <span>2021 - Present</span>
-      <p>Managed 500+ fleet accounts, FASTag onboarding, GPS & loan operations.</p>
+      <p>2021 - Present</p>
+      <p>Managed 500+ fleet accounts, FASTag, GPS, loans, and customer support.</p>
     </div>
 
-    <div class="item">
+    <div class="card">
       <h3>Neoteric Properties</h3>
-      <span>2020 - 2021</span>
+      <p>2020 - 2021</p>
       <p>Handled premium property marketing and documentation workflows.</p>
     </div>
+
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
+<section id="skills">
   <h2>Skills</h2>
-
-  <div class="skills-grid">
-    <div>Customer Success</div>
-    <div>FASTag</div>
-    <div>Fleet Management</div>
-    <div>CRM Tools</div>
-    <div>SQL</div>
-    <div>APIs</div>
+  <div class="skills">
+    <span>Customer Success</span>
+    <span>FASTag</span>
+    <span>Fleet Operations</span>
+    <span>CRM</span>
+    <span>SQL</span>
+    <span>APIs</span>
+    <span>Fintech Sales</span>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Vikash Goswami | Built for GitHub Pages</p>
-</footer>
-
-<script src="js/script.js"></script>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    Email: swamiv768@gmail.com <br>
+    Phone: +91 6263184285
+  </div>
+</section>
 
 </body>
 </html>
