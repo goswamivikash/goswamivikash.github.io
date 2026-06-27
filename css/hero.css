@@ -1,1 +1,219 @@
 
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding:0 10%;
+}
+
+/* Animated Gradient Background */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    background:linear-gradient(45deg,#38bdf8,#0ea5e9,#8b5cf6);
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    animation:float1 8s ease-in-out infinite;
+
+    opacity:.4;
+
+    top:-200px;
+    left:-200px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:linear-gradient(45deg,#06b6d4,#3b82f6);
+
+    border-radius:50%;
+
+    filter:blur(150px);
+
+    animation:float2 10s ease-in-out infinite;
+
+    bottom:-150px;
+    right:-150px;
+
+    opacity:.4;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    animation:fadeDown 1s;
+
+}
+
+.hero span{
+
+    color:#38bdf8;
+
+}
+
+.hero h2{
+
+    color:#cbd5e1;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:#d1d5db;
+
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+}
+
+.hero .btn{
+
+    margin:15px;
+
+}
+
+/* Scroll Indicator */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    animation:bounce 2s infinite;
+
+    font-size:30px;
+
+}
+
+/* Floating Animations */
+
+@keyframes float1{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(60px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes float2{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-70px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Fade */
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Bounce */
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,12px);
+
+}
+
+}
