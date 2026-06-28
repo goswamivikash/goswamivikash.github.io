@@ -1,408 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Vikash Goswami — Customer Experience</title>
-<meta name="description" content="Senior CX & Account Management at BlackBuck. 5+ years, 500+ accounts, ₹5L revenue deals."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vikash Goswami — Customer Experience · Fintech · Fleet Tech</title>
+<meta name="description" content="Vikash Goswami — Customer Experience professional specializing in fintech product sales (FASTag, GPS, Fuel Cards, Loans) and fleet operations at BlackBuck, India's largest trucking platform.">
+<meta name="keywords" content="Vikash Goswami, Customer Experience, Fintech, FASTag, Fleet Management, BlackBuck, Logistics Tech">
+<meta name="author" content="Vikash Goswami">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vikash Goswami — Customer Experience · Fintech · Fleet Tech">
+<meta property="og:description" content="5+ years driving fleet owner growth and retention at BlackBuck through fintech product sales and customer experience excellence.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/profile.jpg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vikash Goswami",
+  "jobTitle": "Senior Associate – Customer Experience",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "BlackBuck Limited (Zinka Logistics Solutions Pvt. Ltd.)"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "email": "swamiv768@gmail.com",
+  "telephone": "+91 6263184285"
+}
+</script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B1320%22/><path d=%22M20 65 L40 35 L60 55 L80 30%22 stroke=%22%2316E0BD%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><circle cx=%2280%22 cy=%2230%22 r=%227%22 fill=%22%23FF9F40%22/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<canvas id="particles"></canvas>
-
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
-
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-logo">VG<span>.</span></div>
-  <div class="nav-links">
-    <a href="#impact">Impact</a>
-    <a href="#work">Work</a>
-    <a href="#skills">Skills</a>
-    <a href="#awards">Awards</a>
-  </div>
-  <a href="#contact" class="nav-hire magnetic">Hire Me</a>
-  <button class="nav-burger" id="burger"><span></span><span></span></button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <nav>
-    <a href="#impact" class="mobile-link">Impact</a>
-    <a href="#work" class="mobile-link">Work</a>
-    <a href="#skills" class="mobile-link">Skills</a>
-    <a href="#awards" class="mobile-link">Awards</a>
-    <a href="#contact" class="mobile-link mobile-cta">Hire Me</a>
-  </nav>
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" aria-hidden="true">
+  <svg class="loader-route" viewBox="0 0 240 80" width="240" height="80">
+    <path id="loaderPath" d="M10 60 L60 20 L120 50 L180 15 L230 40" fill="none" stroke="#1B2A44" stroke-width="3" stroke-linecap="round"/>
+    <path id="loaderPathFill" d="M10 60 L60 20 L120 50 L180 15 L230 40" fill="none" stroke="#16E0BD" stroke-width="3" stroke-linecap="round"/>
+    <circle id="loaderDot" r="5" fill="#FF9F40"/>
+  </svg>
+  <p class="loader-label">CALCULATING ROUTE<span class="loader-dots"></span></p>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-eyebrow">
-    <span class="status-dot"></span>
-    <span>Available for opportunities</span>
+<!-- ============ SKIP LINK ============ -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Vikash Goswami home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32"><path d="M4 22 L12 10 L18 18 L28 6" stroke="#16E0BD" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="6" r="3" fill="#FF9F40"/></svg>
+      </span>
+      <span class="logo-text">VIKASH<span class="logo-accent">.</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#projects" data-nav="projects">Case Studies</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5"/><g stroke-width="2"><line x1="12" y1="1.5" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22.5" y2="12"/><line x1="4.5" y1="4.5" x2="6.6" y2="6.6"/><line x1="17.4" y1="17.4" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.6" y2="17.4"/><line x1="17.4" y1="6.6" x2="19.5" y2="4.5"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <a href="resume/Vikash_Goswami_Resume.pdf" class="btn btn-ghost" download>Resume</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
-  <div class="hero-main">
-    <div class="hero-text">
-      <div class="hero-role-wrap">
-        <span class="hero-role-label">Senior Associate, CX</span>
-        <span class="hero-role-divider">·</span>
-        <span class="hero-role-label">BlackBuck</span>
-      </div>
-      <h1 class="hero-name">
-        <span class="word-reveal">Vikash</span>
-        <span class="word-reveal accent-text">Goswami</span>
-      </h1>
-      <p class="hero-desc reveal-fade">
-        Bridging fleet owners and fintech at scale — <strong>500+ accounts, ₹5L+ revenue deals, 92% renewal rate</strong>. 5 years at India's largest trucking platform.
+  <div class="nav-progress" id="navProgress" aria-hidden="true"></div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Case Studies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="resume/Vikash_Goswami_Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-fade"></div>
+      <svg class="hero-route" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+        <path id="heroRoute" d="M-50 560 C 150 560, 220 420, 360 430 C 520 440, 560 250, 720 240 C 880 230, 920 380, 1080 340 C 1180 315, 1220 360, 1280 330"
+          fill="none" stroke="url(#routeGrad)" stroke-width="2.5" stroke-dasharray="1 10" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#16E0BD" stop-opacity="0"/>
+            <stop offset="15%" stop-color="#16E0BD" stop-opacity="0.6"/>
+            <stop offset="85%" stop-color="#FF9F40" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FF9F40" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle class="route-vehicle" r="5" fill="#FF9F40">
+          <animateMotion dur="9s" repeatCount="indefinite" rotate="auto"
+            path="M-50 560 C 150 560, 220 420, 360 430 C 520 440, 560 250, 720 240 C 880 230, 920 380, 1080 340 C 1180 315, 1220 360, 1280 330"/>
+        </circle>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow" data-reveal>
+        <span class="status-dot" aria-hidden="true"></span>
+        Available for Customer Experience &amp; Fintech roles
       </p>
-      <div class="hero-ctas reveal-fade">
-        <a href="#work" class="btn-primary magnetic">View My Work</a>
-        <a href="mailto:swamiv768@gmail.com" class="btn-secondary magnetic">Get In Touch</a>
+
+      <h1 class="hero-title" data-reveal>
+        <span class="line">Driving growth at the</span>
+        <span class="line">intersection of</span>
+        <span class="line hero-rotator-line">
+          <span class="rotator" id="heroRotator">Customer Experience</span>
+        </span>
+      </h1>
+
+      <p class="hero-sub" data-reveal>
+        I'm <strong>Vikash Goswami</strong> — 5+ years managing fleet owner accounts at
+        <strong> BlackBuck</strong>, India's largest trucking &amp; logistics platform. I blend
+        fintech product sales (FASTag, GPS, Fuel Cards, Loans) with hands-on support to
+        drive acquisition, cross-sell, and near-zero churn.
+      </p>
+
+      <div class="hero-actions" data-reveal>
+        <a href="#projects" class="btn btn-primary">
+          View Case Studies
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
       </div>
-      <div class="hero-stats reveal-fade">
-        <div class="hero-stat"><span class="stat-n">5+</span><span class="stat-l">Years Exp</span></div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat"><span class="stat-n">500+</span><span class="stat-l">Accounts</span></div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat"><span class="stat-n">92%</span><span class="stat-l">Renewal Rate</span></div>
-      </div>
-    </div>
-    <div class="hero-visual reveal-fade">
-      <div class="hero-card-3d" id="heroCard">
-        <div class="hc-inner">
-          <div class="hc-avatar">VG</div>
-          <div class="hc-name">Vikash Goswami</div>
-          <div class="hc-title">Senior Associate · CX</div>
-          <div class="hc-divider"></div>
-          <div class="hc-badges">
-            <span>FASTag</span><span>GPS</span><span>Fintech</span><span>B2B</span>
-          </div>
-          <div class="hc-company">
-            <span class="hc-co-dot"></span>BlackBuck · Bengaluru
-          </div>
-          <div class="hc-glow"></div>
+
+      <div class="hero-kpis" data-reveal>
+        <div class="kpi">
+          <span class="kpi-num" data-count="5" data-suffix="+">0</span>
+          <span class="kpi-label">Years at BlackBuck</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi">
+          <span class="kpi-num" data-count="1000" data-suffix="+">0</span>
+          <span class="kpi-label">Vehicles onboarded to AIS 140</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi">
+          <span class="kpi-num" data-count="90" data-suffix="%+">0</span>
+          <span class="kpi-label">Targets achieved, consistently</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi">
+          <span class="kpi-num" data-count="20" data-suffix="%">0</span>
+          <span class="kpi-label">Retention improvement</span>
         </div>
       </div>
-      <div class="hero-orb orb-1"></div>
-      <div class="hero-orb orb-2"></div>
     </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>About</p>
+      <h2 class="section-title" data-reveal>Built for the operational reality of fleet &amp; fintech CX</h2>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>
+            I sit where customer experience, fintech products, and logistics operations meet.
+            At BlackBuck, that means managing a live portfolio of B2B transport companies and
+            B2C commercial vehicle operators — handling onboarding tickets, FASTag KYC,
+            renewals, and escalations every single day, while also being judged on hard
+            acquisition and cross-sell numbers.
+          </p>
+          <p>
+            It's a dual-role grind: part support desk, part sales engine. I've stayed in it
+            for 5+ years because I'm good at the part most people find hardest — keeping a
+            fleet owner calm during an escalation, then turning that same relationship into a
+            GPS or Loan upsell three months later.
+          </p>
+          <p>
+            Recognised with a <strong>Mission Sparta Bronze Award</strong> and an
+            <strong> 'Exceeds Expectation'</strong> rating — not for one big win, but for
+            consistency across renewals, activations, and retention, quarter after quarter.
+          </p>
+        </div>
+
+        <div class="about-card" data-reveal>
+          <div class="card-glass">
+            <h3>Quick Facts</h3>
+            <ul class="fact-list">
+              <li><span class="fact-icon" data-icon="briefcase"></span><span><strong>Role</strong> Senior Associate – Customer Experience</span></li>
+              <li><span class="fact-icon" data-icon="building"></span><span><strong>Company</strong> BlackBuck (Zinka Logistics)</span></li>
+              <li><span class="fact-icon" data-icon="pin"></span><span><strong>Based in</strong> Bengaluru, Karnataka</span></li>
+              <li><span class="fact-icon" data-icon="grad"></span><span><strong>Education</strong> PGDCA · B.Com</span></li>
+              <li><span class="fact-icon" data-icon="globe"></span><span><strong>Languages</strong> English · Hindi</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Domain icon strip -->
+      <div class="domain-strip" data-reveal>
+        <div class="domain-chip">
+          <span class="icon-3d" data-icon3d="tag"></span>
+          <span>FASTag Lifecycle</span>
+        </div>
+        <div class="domain-chip">
+          <span class="icon-3d" data-icon3d="gps"></span>
+          <span>GPS &amp; AIS 140</span>
+        </div>
+        <div class="domain-chip">
+          <span class="icon-3d" data-icon3d="card"></span>
+          <span>Fuel Cards</span>
+        </div>
+        <div class="domain-chip">
+          <span class="icon-3d" data-icon3d="loan"></span>
+          <span>Vehicle Loans</span>
+        </div>
+        <div class="domain-chip">
+          <span class="icon-3d" data-icon3d="truck"></span>
+          <span>Fleet Ops</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE / TIMELINE ============ -->
+  <section class="experience" id="experience">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>Career Route</p>
+      <h2 class="section-title" data-reveal>Every stop, mapped</h2>
+      <p class="section-sub" data-reveal>The path from real estate marketing to fintech-driven fleet operations at India's largest trucking platform.</p>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-track" aria-hidden="true">
+          <div class="timeline-track-fill" id="timelineFill"></div>
+        </div>
+
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">May 2021 — Present</span>
+            <h3>Senior Associate, Customer Experience</h3>
+            <p class="timeline-org">BlackBuck Limited (Zinka Logistics Solutions Pvt. Ltd.) · Bengaluru</p>
+            <ul>
+              <li>Manage end-to-end fleet owner relationships across B2B transport companies and B2C commercial vehicle operators — onboarding through long-term retention.</li>
+              <li>Own the full FASTag lifecycle: KYC activation, wallet recharges, renewals, blacklist resolution, Gold upgrades.</li>
+              <li>Cross-sell GPS, Fuel Cards, and Loans into existing accounts — 2–3 additional products per fleet owner on average.</li>
+              <li>Onboarded 1000+ commercial vehicles onto AIS 140 VLTD compliance, including device activation and post-activation troubleshooting.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Mission Sparta Bronze · 2022</span>
+              <span class="tag">Exceeds Expectation · 2024</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">Mar 2020 — Mar 2021</span>
+            <h3>Senior Marketing Executive</h3>
+            <p class="timeline-org">Neoteric Properties · Gwalior, MP</p>
+            <ul>
+              <li>Generated 30+ qualified buyer inquiries per month across high-value property portfolios.</li>
+              <li>Positioned premium listings to high-net-worth buyers, aligning features to investor requirements.</li>
+              <li>Maintained 100% accuracy across contracts, leases, deeds, and closing statements.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">2022</span>
+            <h3>Post Graduate Diploma in Computer Applications</h3>
+            <p class="timeline-org">Makhanlal Chaturvedi National University</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">2020</span>
+            <h3>Bachelor of Commerce (B.Com)</h3>
+            <p class="timeline-org">Jiwaji University, Gwalior</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>Capabilities</p>
+      <h2 class="section-title" data-reveal>What I bring to the desk</h2>
+
+      <div class="skills-filter" data-reveal role="tablist" aria-label="Skill categories">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="sales" role="tab" aria-selected="false">Sales &amp; Growth</button>
+        <button class="filter-btn" data-filter="cx" role="tab" aria-selected="false">CX &amp; Ops</button>
+        <button class="filter-btn" data-filter="logistics" role="tab" aria-selected="false">Logistics &amp; Fleet</button>
+        <button class="filter-btn" data-filter="tech" role="tab" aria-selected="false">Technical</button>
+      </div>
+
+      <div class="skills-grid bento" id="skillsGrid" data-reveal>
+        <!-- populated by JS for filtering, but progressive HTML fallback below -->
+      </div>
+      <noscript>
+        <div class="skills-fallback">
+          <p><strong>Sales &amp; Growth:</strong> Key Account Management, Client Acquisition, Lead Generation, Pipeline Management, Customer Retention, Fleet Management Solutions, Upselling &amp; Cross-Selling.</p>
+          <p><strong>CX &amp; Operations:</strong> FASTag Support, Renewals Management, Fintech Sales, Customer Acquisition, Fleet Owner Management, B2B &amp; B2C Accounts, Escalation Resolution, SLA Management, KYC &amp; Compliance, CRM, MIS Reporting.</p>
+          <p><strong>Logistics &amp; Fleet:</strong> Commercial Vehicle Ops, Fleet Activation, AIS 140 VLTD, GPS Tracking, Load Matching, Shipper Support, Fuel Cards, Vehicle Loans, Transport Ops.</p>
+          <p><strong>Technical:</strong> SQL, Oracle DB, Google Cloud Platform, GitHub, Active Directory, JSON &amp; API, Microsoft Excel / Office Suite.</p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS / CASE STUDIES ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>Case Studies</p>
+      <h2 class="section-title" data-reveal>Real outcomes, real accounts</h2>
+      <p class="section-sub" data-reveal>Selected results from managing fleet owner portfolios at BlackBuck — plus a couple of side builds.</p>
+
+      <div class="project-gallery" data-reveal>
+
+        <article class="project-card" tabindex="0" data-modal="caseFastag">
+          <div class="project-visual" data-visual="fastag" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag">Case Study · Fintech Ops</span>
+            <h3>FASTag Lifecycle at Scale</h3>
+            <p>Owned KYC activation, wallet recharges, renewals, and blacklist resolution across a high-volume fleet owner base.</p>
+            <span class="project-link">View details →</span>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-modal="caseGPS">
+          <div class="project-visual" data-visual="gps" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag">Case Study · Compliance</span>
+            <h3>1000+ Vehicles onto AIS 140</h3>
+            <p>Managed device activation, regulatory compliance, troubleshooting, and driver alert setup at fleet scale.</p>
+            <span class="project-link">View details →</span>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-modal="caseRetention">
+          <div class="project-visual" data-visual="retention" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag">Case Study · Retention</span>
+            <h3>Proactive Renewals Calendar</h3>
+            <p>Designed a renewals + escalation workflow that lifted enterprise fleet owner retention 15–20%.</p>
+            <span class="project-link">View details →</span>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-modal="caseMIS">
+          <div class="project-visual" data-visual="mis" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag">Case Study · Reporting</span>
+            <h3>Automated MIS &amp; Tracking</h3>
+            <p>Built tracking and reporting workflows in BB Pro that cut manual reporting effort by 25%.</p>
+            <span class="project-link">View details →</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card-placeholder" tabindex="0">
+          <div class="project-visual" data-visual="placeholder" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag project-tag-muted">Coming soon</span>
+            <h3>Personal Project Slot</h3>
+            <p>Reserved for a future build — automation script, dashboard, or side project. Swap this card out anytime.</p>
+            <span class="project-link project-link-muted">Add your project →</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card-placeholder" tabindex="0">
+          <div class="project-visual" data-visual="placeholder2" aria-hidden="true"></div>
+          <div class="project-body">
+            <span class="project-tag project-tag-muted">Coming soon</span>
+            <h3>Personal Project Slot</h3>
+            <p>Reserved for a future build. Great place for a no-code tool, spreadsheet model, or case study PDF.</p>
+            <span class="project-link project-link-muted">Add your project →</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow" data-reveal>Get in touch</p>
+      <h2 class="section-title" data-reveal>Let's talk about your team</h2>
+      <p class="section-sub" data-reveal>Open to Customer Experience, Fintech Sales, and Fleet/Logistics Ops roles. I usually reply within a day.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <a href="mailto:swamiv768@gmail.com" class="contact-row">
+            <span class="contact-icon" data-icon="mail"></span>
+            <span>swamiv768@gmail.com</span>
+          </a>
+          <a href="tel:+916263184285" class="contact-row">
+            <span class="contact-icon" data-icon="phone"></span>
+            <span>+91 6263184285</span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-icon" data-icon="pin"></span>
+            <span>Kadubeesanahalli, Bengaluru, Karnataka 560103</span>
+          </div>
+          <a href="#" class="contact-row" id="linkedinLink">
+            <span class="contact-icon" data-icon="linkedin"></span>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+
+        <form class="contact-form card-glass" data-reveal id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required minlength="2" autocomplete="name">
+            <span class="form-error" data-error-for="cf-name"></span>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email">
+            <span class="form-error" data-error-for="cf-email"></span>
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required minlength="10"></textarea>
+            <span class="form-error" data-error-for="cf-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span class="submit-text">Send Message</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ PROJECT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <div id="modalContent"></div>
   </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll to explore</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+</div>
 
-<!-- IMPACT STRIP -->
-<section class="impact-strip" id="impact">
-  <div class="impact-inner">
-    <div class="impact-kicker">By the numbers</div>
-    <h2 class="impact-title reveal-up">Every metric tells a story</h2>
-    <div class="impact-grid">
-      <div class="impact-card reveal-up" data-val="500" data-suf="+">
-        <div class="ic-num"><span class="count-up">0</span>+</div>
-        <div class="ic-label">Fleet owner accounts managed</div>
-        <div class="ic-sub">B2B & B2C portfolio</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="7200" data-suf="+">
-        <div class="ic-num"><span class="count-up">0</span>+</div>
-        <div class="ic-label">FASTag accounts onboarded</div>
-        <div class="ic-sub">120+ units/month, 5 yrs</div>
-      </div>
-      <div class="impact-card reveal-up featured" data-val="92" data-suf="%">
-        <div class="ic-num"><span class="count-up">0</span>%</div>
-        <div class="ic-label">Portfolio renewal rate</div>
-        <div class="ic-sub">Near-zero churn</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="80" data-suf="+">
-        <div class="ic-num"><span class="count-up">0</span>+</div>
-        <div class="ic-label">Support tickets / day</div>
-        <div class="ic-sub">SLA compliant, always</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="35" data-suf="%">
-        <div class="ic-num"><span class="count-up">0</span>%</div>
-        <div class="ic-label">Lead-to-activation rate</div>
-        <div class="ic-sub">Consistent conversion</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="30" data-suf="%">
-        <div class="ic-num"><span class="count-up">0</span>%</div>
-        <div class="ic-label">Operational efficiency gain</div>
-        <div class="ic-sub">Via MIS automation</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="1800" data-suf="+">
-        <div class="ic-num"><span class="count-up">0</span>+</div>
-        <div class="ic-label">Vehicles GPS activated</div>
-        <div class="ic-sub">AIS 140 VLTD compliant</div>
-      </div>
-      <div class="impact-card reveal-up" data-val="200" data-suf="+">
-        <div class="ic-num"><span class="count-up">0</span>+</div>
-        <div class="ic-label">New accounts per quarter</div>
-        <div class="ic-sub">Outbound + inbound</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK / EXPERIENCE -->
-<section class="work" id="work">
-  <div class="work-inner">
-    <div class="work-left sticky-panel">
-      <div class="work-kicker reveal-up">Career</div>
-      <h2 class="work-title reveal-up">Where I've<br/><em>made impact</em></h2>
-      <p class="work-desc reveal-up">5+ years transforming how fleet owners adopt fintech — from FASTag to GPS to commercial loans.</p>
-      <div class="work-line reveal-up"></div>
-    </div>
-    <div class="work-right">
-
-      <!-- BlackBuck -->
-      <div class="job-block reveal-up">
-        <div class="job-header">
-          <div class="job-badge current">Current</div>
-          <div class="job-meta">
-            <div class="job-co">BlackBuck Limited · Zinka Logistics</div>
-            <div class="job-period">May 2021 – Present · 4+ yrs</div>
-          </div>
-        </div>
-        <h3 class="job-title">Senior Associate<br/>Customer Experience</h3>
-        <div class="job-tags">
-          <span>FASTag</span><span>GPS / AIS 140</span><span>Fuel Cards</span><span>Loans</span><span>Load Board</span>
-        </div>
-        <div class="job-cards">
-          <div class="jc reveal-up">
-            <div class="jc-icon">🚛</div>
-            <div class="jc-body">
-              <strong>Fleet Account Management</strong>
-              <p>End-to-end lifecycle for 500+ accounts — onboarding, activation, renewals. 92%+ renewal rate with 80+ tickets resolved daily, SLA compliant throughout.</p>
-            </div>
-          </div>
-          <div class="jc reveal-up">
-            <div class="jc-icon">📡</div>
-            <div class="jc-body">
-              <strong>FASTag & Telematics</strong>
-              <p>Full FASTag lifecycle for 1,000+ active accounts, 120+ units/month. KYC, wallet recharges, blacklisting resolution, Gold upgrades — 7,200+ total over 5 years.</p>
-            </div>
-          </div>
-          <div class="jc reveal-up">
-            <div class="jc-icon">💰</div>
-            <div class="jc-body">
-              <strong>Fintech Sales & Acquisition</strong>
-              <p>200+ new accounts per quarter at 35%+ lead-to-activation. Multi-product cross-sell averaging 2–3 BlackBuck products per fleet owner.</p>
-            </div>
-          </div>
-          <div class="jc jc-highlight reveal-up">
-            <div class="jc-icon">🏆</div>
-            <div class="jc-body">
-              <strong>₹5,00,000 Revenue Deal</strong>
-              <p>Closed 50 Fuel Sensor units at ₹10,000 each in a single transaction — February 2025. Largest single deal in portfolio history.</p>
-            </div>
-          </div>
-          <div class="jc reveal-up">
-            <div class="jc-icon">🛰️</div>
-            <div class="jc-body">
-              <strong>GPS Fleet Activation</strong>
-              <p>30+ GPS/AIS 140 VLTD devices per month across 1,800+ commercial vehicles. Device activation, compliance coordination, troubleshooting, alerts, replacements.</p>
-            </div>
-          </div>
-          <div class="jc reveal-up">
-            <div class="jc-icon">📊</div>
-            <div class="jc-body">
-              <strong>MIS Automation</strong>
-              <p>Designed automated reporting workflows via BB Pro. 30% operational efficiency gain. Daily logging across activations, escalations, renewals, and follow-ups.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Neoteric -->
-      <div class="job-block reveal-up">
-        <div class="job-header">
-          <div class="job-meta">
-            <div class="job-co">Neoteric Properties · Gwalior</div>
-            <div class="job-period">Mar 2020 – Mar 2021 · 1 yr</div>
-          </div>
-        </div>
-        <h3 class="job-title">Senior Marketing<br/>Executive</h3>
-        <div class="job-cards">
-          <div class="jc reveal-up">
-            <div class="jc-icon">🏢</div>
-            <div class="jc-body">
-              <strong>HNI Property Sales</strong>
-              <p>Directed high-value property portfolios and regional marketing. Premium listing placement for high-net-worth buyers, accelerating sales cycles significantly.</p>
-            </div>
-          </div>
-          <div class="jc reveal-up">
-            <div class="jc-icon">📝</div>
-            <div class="jc-body">
-              <strong>Legal Documentation</strong>
-              <p>Streamlined contracts, leases, deeds, and closing statements with 100% accuracy. Designed targeted promotional campaigns and open-house events.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills" id="skills">
-  <div class="skills-inner">
-    <div class="skills-kicker reveal-up">Expertise</div>
-    <h2 class="skills-title reveal-up">Skills & tools</h2>
-    <div class="skills-grid">
-      <div class="skill-group reveal-up">
-        <div class="sg-label">Sales & Growth</div>
-        <div class="sg-tags">
-          <span>Key Account Management</span>
-          <span>Client Acquisition</span>
-          <span>Lead Generation</span>
-          <span>Pipeline Management</span>
-          <span>Customer Retention</span>
-          <span>Upselling & Cross-Selling</span>
-          <span>Fleet Management Solutions</span>
-        </div>
-      </div>
-      <div class="skill-group reveal-up">
-        <div class="sg-label">CX & Operations</div>
-        <div class="sg-tags">
-          <span>FASTag Support</span>
-          <span>Renewals Management</span>
-          <span>Fintech Sales</span>
-          <span>B2B & B2C Accounts</span>
-          <span>Escalation Resolution</span>
-          <span>SLA Management</span>
-          <span>KYC & Compliance</span>
-          <span>MIS Reporting</span>
-          <span>SaaS</span>
-        </div>
-      </div>
-      <div class="skill-group reveal-up">
-        <div class="sg-label">Tech Tools</div>
-        <div class="sg-tags tech">
-          <span>Salesforce Service Cloud</span>
-          <span>Zendesk</span>
-          <span>Jira Service Management</span>
-          <span>MS Dynamics 365</span>
-          <span>SQL</span>
-          <span>Oracle DB</span>
-          <span>Google Cloud Platform</span>
-          <span>GitHub</span>
-          <span>JSON & API</span>
-          <span>Office Suite</span>
-        </div>
-      </div>
-      <div class="skill-group reveal-up">
-        <div class="sg-label">Languages</div>
-        <div class="lang-list">
-          <div class="lang-row">
-            <span class="lang-name">English</span>
-            <div class="lang-track"><div class="lang-fill" data-w="95"></div></div>
-            <span class="lang-lv">Fluent</span>
-          </div>
-          <div class="lang-row">
-            <span class="lang-name">Hindi</span>
-            <div class="lang-track"><div class="lang-fill" data-w="100"></div></div>
-            <span class="lang-lv">Native</span>
-          </div>
-        </div>
-        <div class="sg-label" style="margin-top:28px">Education</div>
-        <div class="edu-list">
-          <div class="edu-item">
-            <div class="edu-year">2021–22</div>
-            <div class="edu-deg">PGDCA — Makhanlal Chaturvedi National University</div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-year">2017–20</div>
-            <div class="edu-deg">B.Com — Jiwaji University, Gwalior</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AWARDS -->
-<section class="awards" id="awards">
-  <div class="awards-inner">
-    <div class="awards-kicker reveal-up">Recognition</div>
-    <h2 class="awards-title reveal-up">Recognised for<br/><em>excellence</em></h2>
-    <div class="awards-grid">
-      <div class="award-card reveal-up">
-        <div class="ac-year">Oct 2021</div>
-        <div class="ac-icon">⭐</div>
-        <h3>Stars of BlackBuck Award</h3>
-        <p>Exceptional performance and outstanding contribution to business objectives in first year at BlackBuck.</p>
-      </div>
-      <div class="award-card reveal-up bronze">
-        <div class="ac-year">Mar 2022</div>
-        <div class="ac-icon">🥉</div>
-        <h3>Mission Sparta Bronze</h3>
-        <p>Outstanding performance during Mission Sparta Sales Sprint — company-wide competitive sales initiative.</p>
-      </div>
-      <div class="award-card reveal-up gold">
-        <div class="ac-year">Mar 2024</div>
-        <div class="ac-icon">🏆</div>
-        <h3>Exceeds Expectation</h3>
-        <p>Top-tier performance rating for outstanding contribution across all sales and service targets.</p>
-      </div>
-      <div class="award-card reveal-up">
-        <div class="ac-year">Jan 2026</div>
-        <div class="ac-icon">🎖️</div>
-        <h3>Certificate of Recognition</h3>
-        <p>Consistent excellence, customer-centric delivery, and sustained organizational contribution through high-quality CX.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="contact-kicker reveal-up">Get in touch</div>
-    <h2 class="contact-title reveal-up">Let's build<br/><em>something great</em></h2>
-    <p class="contact-sub reveal-up">Open to Senior CX, Account Management, and Logistics Tech roles. Bengaluru-based, open to remote.</p>
-    <div class="contact-cards reveal-up">
-      <a href="mailto:swamiv768@gmail.com" class="cc magnetic">
-        <div class="cc-icon">✉</div>
-        <div class="cc-label">Email</div>
-        <div class="cc-val">swamiv768@gmail.com</div>
-      </a>
-      <a href="tel:+916263184285" class="cc magnetic">
-        <div class="cc-icon">📞</div>
-        <div class="cc-label">Phone</div>
-        <div class="cc-val">+91 62631 84285</div>
-      </a>
-      <a href="https://linkedin.com/in/vikash-goswami-14b501180" target="_blank" rel="noopener" class="cc magnetic">
-        <div class="cc-icon">💼</div>
-        <div class="cc-label">LinkedIn</div>
-        <div class="cc-val">vikash-goswami-14b501180</div>
-      </a>
-      <div class="cc">
-        <div class="cc-icon">📍</div>
-        <div class="cc-label">Location</div>
-        <div class="cc-val">Bengaluru, KA 560103</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">VG<span>.</span></div>
-    <p>© 2025 Vikash Goswami</p>
-    <p class="footer-made">Crafted with care</p>
+  <div class="section-inner footer-inner">
+    <div class="footer-left">
+      <span class="logo-text">VIKASH<span class="logo-accent">.</span></span>
+      <p>Customer Experience · Fintech · Fleet &amp; Transport</p>
+    </div>
+    <div class="footer-right">
+      <p>© <span id="year"></span> Vikash Goswami. Built with intent, not a template.</p>
+    </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="js/script.js"></script>
 </body>
 </html>
