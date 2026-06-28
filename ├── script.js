@@ -136,8 +136,7 @@
 
   let savedTheme = "dark";
   try {
-    savedTheme = localStorage.getItem(THEME_KEY) ||
-      (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    savedTheme = localStorage.getItem(THEME_KEY) || "dark";
   } catch (err) {
     savedTheme = "dark";
   }
