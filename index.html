@@ -1,263 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vikash Goswami | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* =========================
-   GLOBAL
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: white;
-  overflow-x: hidden;
-}
-
-/* =========================
-   NAVBAR (GLASS)
-========================= */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  z-index: 999;
-}
-
-nav h2 {
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-nav a {
-  color: white;
-  margin: 0 12px;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  opacity: 1;
-  color: #60a5fa;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 60px;
-  font-weight: 700;
-  background: linear-gradient(90deg,#60a5fa,#a78bfa,#34d399);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeUp 1s ease;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 18px;
-  opacity: 0.8;
-}
-
-.btns {
-  margin-top: 25px;
-}
-
-.btns a {
-  padding: 10px 16px;
-  margin: 5px;
-  border-radius: 8px;
-  text-decoration: none;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  transition: 0.3s;
-}
-
-.btns a:hover {
-  transform: translateY(-3px);
-  background: rgba(255,255,255,0.15);
-}
-
-/* =========================
-   SECTIONS
-========================= */
-section {
-  padding: 100px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* =========================
-   CARDS (GLASS)
-========================= */
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 20px;
-  margin-top: 20px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: #60a5fa;
-}
-
-/* =========================
-   TIMELINE
-========================= */
-.timeline {
-  border-left: 2px solid #60a5fa;
-  padding-left: 20px;
-}
-
-.timeline div {
-  margin-bottom: 20px;
-}
-
-/* =========================
-   SKILLS GRID
-========================= */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills span {
-  padding: 8px 12px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.08);
-  font-size: 13px;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* =========================
-   SCROLL EFFECT
-========================= */
-section {
-  animation: fadeUp 1s ease;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikash Goswami — Customer Experience & Logistics Tech</title>
+  <meta name="description" content="Senior CX & Account Management Professional with 5+ years at BlackBuck." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-  <h2>VG</h2>
-  <div>
-    <a href="#about">About</a>
-    <a href="#exp">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <nav class="nav" id="nav">
+    <div class="nav__logo">VG<span class="dot">.</span></div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#metrics">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact" class="nav__cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Vikash Goswami</h1>
-  <p>Customer Experience • Logistics Tech • Fintech • Fleet Operations</p>
-
-  <div class="btns">
-    <a href="mailto:swamiv768@gmail.com">Email</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/" target="_blank">WhatsApp</a>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    5+ years experience in Customer Experience, FASTag onboarding, GPS tracking,
-    fleet operations and fintech sales at BlackBuck.
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="exp">
-  <h2>Experience</h2>
-
-  <div class="timeline">
-
-    <div class="card">
-      <h3>BlackBuck - Senior Associate</h3>
-      <p>2021 - Present</p>
-      <p>Managed 500+ fleet accounts, FASTag, GPS, loans, and customer support.</p>
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__container">
+      <div class="hero__tag"><span class="pulse"></span>Open to Opportunities</div>
+      <h1 class="hero__name">Vikash<br /><span class="hero__name--accent">Goswami</span></h1>
+      <p class="hero__role"><span class="typewriter" id="typewriter"></span></p>
+      <p class="hero__summary">5+ years shaping customer journeys at <strong>BlackBuck</strong> — India's largest trucking & logistics platform. From FASTag onboarding to GPS telematics, I bridge fintech products with fleet owners at scale.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Get In Touch</a>
+        <a href="#experience" class="btn btn--ghost">View Experience</a>
+      </div>
+      <div class="hero__meta">
+        <span>📍 Bengaluru, Karnataka</span>
+        <span>💼 BlackBuck (Zinka Logistics)</span>
+        <span>📞 +91 62631 84285</span>
+      </div>
     </div>
+    <div class="hero__scroll-hint"><span>Scroll</span><div class="hero__scroll-line"></div></div>
+  </section>
 
-    <div class="card">
-      <h3>Neoteric Properties</h3>
-      <p>2020 - 2021</p>
-      <p>Handled premium property marketing and documentation workflows.</p>
+  <section class="metrics" id="metrics">
+    <div class="container">
+      <div class="section-label">By The Numbers</div>
+      <h2 class="section-title">Measurable Impact<br /><em>Across Every Metric</em></h2>
+      <div class="metrics__grid">
+        <div class="metric-card" data-count="500"><div class="metric-card__number"><span class="counter">0</span>+</div><div class="metric-card__label">Fleet Owner Accounts Managed</div><div class="metric-card__sub">B2B & B2C portfolio</div></div>
+        <div class="metric-card" data-count="7200"><div class="metric-card__number"><span class="counter">0</span>+</div><div class="metric-card__label">FASTag Accounts Onboarded</div><div class="metric-card__sub">Over 5 years</div></div>
+        <div class="metric-card" data-count="92"><div class="metric-card__number"><span class="counter">0</span>%</div><div class="metric-card__label">Portfolio Renewal Rate</div><div class="metric-card__sub">Near-zero churn</div></div>
+        <div class="metric-card" data-count="80"><div class="metric-card__number"><span class="counter">0</span>+</div><div class="metric-card__label">Support Tickets / Day</div><div class="metric-card__sub">SLA compliant</div></div>
+        <div class="metric-card" data-count="35"><div class="metric-card__number"><span class="counter">0</span>%</div><div class="metric-card__label">Lead-to-Activation Rate</div><div class="metric-card__sub">Consistent conversion</div></div>
+        <div class="metric-card metric-card--highlight" data-count="30"><div class="metric-card__number"><span class="counter">0</span>%</div><div class="metric-card__label">Operational Efficiency Gain</div><div class="metric-card__sub">Via MIS automation</div></div>
+        <div class="metric-card" data-count="1800"><div class="metric-card__number"><span class="counter">0</span>+</div><div class="metric-card__label">Vehicles GPS Activated</div><div class="metric-card__sub">AIS 140 VLTD compliant</div></div>
+        <div class="metric-card" data-count="200"><div class="metric-card__number"><span class="counter">0</span>+</div><div class="metric-card__label">New Accounts / Quarter</div><div class="metric-card__sub">Outbound + inbound</div></div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-label">Career Timeline</div>
+      <h2 class="section-title">Professional<br /><em>Experience</em></h2>
+      <div class="timeline">
+        <div class="timeline__item timeline__item--active">
+          <div class="timeline__marker"><div class="timeline__dot"></div><div class="timeline__line"></div></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <div class="timeline__company-tag">Current Role</div>
+                <h3 class="timeline__role">Senior Associate – Customer Experience</h3>
+                <p class="timeline__company">BlackBuck Limited (Zinka Logistics Solutions Pvt. Ltd.)</p>
+              </div>
+              <div class="timeline__period">May 2021 – Present</div>
+            </div>
+            <div class="timeline__products">
+              <span class="product-tag">FASTag</span>
+              <span class="product-tag">GPS / AIS 140</span>
+              <span class="product-tag">Fuel Cards</span>
+              <span class="product-tag">Commercial Loans</span>
+              <span class="product-tag">Load Board</span>
+            </div>
+            <div class="timeline__achievements">
+              <div class="achievement"><div class="achievement__icon">🚛</div><div><strong>Fleet Owner Account Management</strong><p>End-to-end management of 500+ fleet owner accounts — onboarding, activation, renewals, retention. 92%+ renewal rate, near-zero churn. Resolved 80+ tickets/day across FASTag, GPS, loan queries.</p></div></div>
+              <div class="achievement"><div class="achievement__icon">📡</div><div><strong>FASTag & Telematics Onboarding</strong><p>Full FASTag lifecycle for 1,000+ active accounts — 120+ units/month across KYC activation, wallet recharges, blacklisting resolution, and Gold upgrades.</p></div></div>
+              <div class="achievement"><div class="achievement__icon">💰</div><div><strong>Fintech Product Sales</strong><p>Acquired 200+ new accounts per quarter at 35%+ lead-to-activation rate. Drove multi-product adoption — 2–3 additional products per fleet owner.</p></div></div>
+              <div class="achievement"><div class="achievement__icon">🛰️</div><div><strong>GPS & Fleet Tech Activation</strong><p>30+ GPS/AIS 140 VLTD devices/month across 1,800+ vehicles. Closed 50 Fuel Sensor units at ₹10,000 each — <strong>₹5,00,000 in revenue</strong> (Feb 2025).</p></div></div>
+              <div class="achievement"><div class="achievement__icon">⛽</div><div><strong>Fuel Card Onboarding</strong><p>5+ fleet owners/month onto Fuel Card plans (₹2,999–₹49,999) across Jio-BP, IOCL, and HPCL for structured fleet expense management.</p></div></div>
+              <div class="achievement"><div class="achievement__icon">📊</div><div><strong>MIS Automation & Reporting</strong><p>Designed automated MIS workflows via BB Pro — improving operational efficiency by 30%. Daily logging of interactions, activations, escalations, and renewals.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker"><div class="timeline__dot"></div></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Senior Marketing Executive</h3>
+                <p class="timeline__company">Neoteric Properties · Gwalior, MP</p>
+              </div>
+              <div class="timeline__period">Mar 2020 – Mar 2021</div>
+            </div>
+            <div class="timeline__achievements">
+              <div class="achievement"><div class="achievement__icon">🏢</div><div><strong>High-Value Property Portfolios</strong><p>Regional marketing strategies generating qualified HNI buyer inquiries. Accelerated sales cycles by aligning premium listings with investor requirements.</p></div></div>
+              <div class="achievement"><div class="achievement__icon">📝</div><div><strong>Legal & Financial Documentation</strong><p>Streamlined contracts, leases, deeds, and closing statements with 100% accuracy throughout.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Customer Success</span>
-    <span>FASTag</span>
-    <span>Fleet Operations</span>
-    <span>CRM</span>
-    <span>SQL</span>
-    <span>APIs</span>
-    <span>Fintech Sales</span>
-  </div>
-</section>
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-label">Product Expertise</div>
+      <h2 class="section-title">BlackBuck Ecosystem<br /><em>Mastery</em></h2>
+      <div class="products__grid">
+        <div class="product-card"><div class="product-card__icon">🏷️</div><h3>FASTag</h3><p>Full lifecycle — KYC, activation, recharges, blacklisting, Gold upgrades. 7,200+ accounts over 5 years.</p><div class="product-card__stat">7,200+ accounts</div></div>
+        <div class="product-card"><div class="product-card__icon">📡</div><h3>GPS / AIS 140 VLTD</h3><p>Device activation, compliance coordination, alert setup, post-install troubleshooting, replacement support.</p><div class="product-card__stat">1,800+ vehicles</div></div>
+        <div class="product-card"><div class="product-card__icon">⛽</div><h3>Fuel Cards</h3><p>Jio-BP, IOCL, HPCL onboarding for structured fuel expense management across fleet operators.</p><div class="product-card__stat">₹2,999–₹49,999 plans</div></div>
+        <div class="product-card product-card--featured"><div class="product-card__icon">💸</div><h3>Commercial Loans</h3><p>Paperless applications, KYC verification, credit eligibility assessments, finance team coordination.</p><div class="product-card__stat">End-to-end processing</div></div>
+        <div class="product-card"><div class="product-card__icon">📦</div><h3>Load Board</h3><p>Connecting fleet owners with freight opportunities, driving platform adoption and engagement.</p><div class="product-card__stat">Cross-sell product</div></div>
+        <div class="product-card"><div class="product-card__icon">📊</div><h3>BB Pro MIS</h3><p>Automated reporting workflows, daily logging, operational dashboards. 30% efficiency improvement.</p><div class="product-card__stat">30% efficiency gain</div></div>
+      </div>
+    </div>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    Email: @gmail.com <br>
-    Phone: +91 
-  </div>
-</section>
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-label">Technical Arsenal</div>
+      <h2 class="section-title">Skills &<br /><em>Expertise</em></h2>
+      <div class="skills__grid">
+        <div class="skills__group">
+          <h3 class="skills__group-title">Sales & Business Growth</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Key Account Management</span><span class="skill-tag">Client Acquisition</span><span class="skill-tag">Lead Generation</span><span class="skill-tag">Pipeline Management</span><span class="skill-tag">Customer Retention</span><span class="skill-tag">Fleet Management Solutions</span><span class="skill-tag">Upselling & Cross-Selling</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Customer Experience & Ops</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">FASTag Support</span><span class="skill-tag">Renewals Management</span><span class="skill-tag">Fintech Sales</span><span class="skill-tag">B2B & B2C Accounts</span><span class="skill-tag">Escalation Resolution</span><span class="skill-tag">SLA Management</span><span class="skill-tag">KYC & Compliance</span><span class="skill-tag">SaaS</span><span class="skill-tag">MIS Reporting</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Technical Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--tech">Salesforce Service Cloud</span><span class="skill-tag skill-tag--tech">Zendesk</span><span class="skill-tag skill-tag--tech">Jira Service Management</span><span class="skill-tag skill-tag--tech">MS Dynamics 365</span><span class="skill-tag skill-tag--tech">SQL</span><span class="skill-tag skill-tag--tech">Oracle DB</span><span class="skill-tag skill-tag--tech">Google Cloud Platform</span><span class="skill-tag skill-tag--tech">GitHub</span><span class="skill-tag skill-tag--tech">JSON & API</span><span class="skill-tag skill-tag--tech">Office Suite</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Languages</h3>
+          <div class="lang-bars">
+            <div class="lang-bar"><span class="lang-bar__name">English</span><div class="lang-bar__track"><div class="lang-bar__fill" data-width="95"></div></div><span class="lang-bar__level">Fluent</span></div>
+            <div class="lang-bar"><span class="lang-bar__name">Hindi</span><div class="lang-bar__track"><div class="lang-bar__fill" data-width="100"></div></div><span class="lang-bar__level">Native</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="awards" id="awards">
+    <div class="container">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Awards &<br /><em>Achievements</em></h2>
+      <div class="awards__grid">
+        <div class="award-card"><div class="award-card__icon">⭐</div><div class="award-card__year">Oct 2021</div><h3>Stars of BlackBuck Award</h3><p>Exceptional performance and outstanding contribution to business objectives in the first year.</p></div>
+        <div class="award-card award-card--bronze"><div class="award-card__icon">🥉</div><div class="award-card__year">Mar 2022</div><h3>Mission Sparta Bronze Award</h3><p>Outstanding sales performance during the Mission Sparta Sales Sprint — company-wide competitive initiative.</p></div>
+        <div class="award-card award-card--gold"><div class="award-card__icon">🏆</div><div class="award-card__year">Mar 2024</div><h3>Exceeds Expectation Rating</h3><p>Top performance rating for outstanding contribution across sales and service targets.</p></div>
+        <div class="award-card"><div class="award-card__icon">🎖️</div><div class="award-card__year">Jan 2026</div><h3>Certificate of Recognition</h3><p>Consistent excellence, customer-centric service delivery, and sustained organizational contribution.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-label">Academic Background</div>
+      <h2 class="section-title">Education</h2>
+      <div class="education__grid">
+        <div class="edu-card"><div class="edu-card__icon">🎓</div><div class="edu-card__period">2021 – 2022</div><h3>Post Graduate Diploma in Computer Applications</h3><p>Makhanlal Chaturvedi National University</p></div>
+        <div class="edu-card"><div class="edu-card__icon">📚</div><div class="edu-card__period">2017 – 2020</div><h3>Bachelor of Commerce (B.Com)</h3><p>Jiwaji University, Gwalior</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's Build<br /><em>Something Together</em></h2>
+      <p class="contact__intro">Open to Senior CX, Account Management, and Logistics Tech roles. Let's connect.</p>
+      <div class="contact__cards">
+        <a href="mailto:swamiv768@gmail.com" class="contact-card"><div class="contact-card__icon">✉️</div><div class="contact-card__label">Email</div><div class="contact-card__value">swamiv768@gmail.com</div></a>
+        <a href="tel:+916263184285" class="contact-card"><div class="contact-card__icon">📞</div><div class="contact-card__label">Phone</div><div class="contact-card__value">+91 62631 84285</div></a>
+        <a href="https://linkedin.com/in/vikash-goswami-14b501180" target="_blank" rel="noopener" class="contact-card"><div class="contact-card__icon">💼</div><div class="contact-card__label">LinkedIn</div><div class="contact-card__value">vikash-goswami-14b501180</div></a>
+        <div class="contact-card"><div class="contact-card__icon">📍</div><div class="contact-card__label">Location</div><div class="contact-card__value">Bengaluru, Karnataka 560103</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">VG<span class="dot">.</span></div>
+        <p>© 2025 Vikash Goswami. Built with purpose.</p>
+        <p class="footer__stack">HTML · CSS · JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
